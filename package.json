@@ -1,0 +1,33 @@
+{
+  "name": "cucumbertest",
+  "version": "1.0.0",
+  "description": "cucumber tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antito5/CucumberTests.git"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber"
+  ],
+  "author": "amorano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antito5/CucumberTests/issues"
+  },
+  "homepage": "https://github.com/Antito5/CucumberTests#readme",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.3.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": 
+      "cypress/e2e/stepDefinitions/*.js"
+  }
+  
+}
