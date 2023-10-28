@@ -8,31 +8,34 @@ class demoBlaze{
         return cy.get('.btn.btn-success');
     }
 
-    GetCountryInput(){
+    getNameInput(){
         return cy.get('input#name');
     }
-    GetCityInput(){
+    getCountryInput(){
+        return cy.get('input#country');
+    }
+    getCityInput(){
         return cy.get('input#city');
     }
-    GetCardInput(){
+    getCardInput(){
         return cy.get('input#card');
     }
-    GetMonthInput(){
+    getMonthInput(){
         return cy.get('input#month');
     }
-    GetYearInput(){
+    getYearInput(){
         return cy.get('input#year');
     }
-    GetPurchaseButton(){
+    getPurchaseButton(){
         return cy.get('body [tabindex="-1"]:nth-of-type(3) .btn-primary');
     }
-    GetThankYouMessage(){
+    getThankYouMessage(){
         return cy.get('body [tabindex] h2');
     }
-    GetPurchaseDetail(){
+    getPurchaseDetail(){
         return cy.get('p.lead.text-muted');
     }
-    GetOkButton(){
+    getOkButton(){
         return cy.get('.btn.btn-lg.btn-primary.confirm');
     }
 

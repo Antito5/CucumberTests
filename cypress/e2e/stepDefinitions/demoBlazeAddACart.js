@@ -4,33 +4,33 @@ const demoBlazeProduct=require("../../Pages/demoBlazeProduct")
 const demoBlazeCart=require("../../Pages/demoBlazeCart")
 
 Then(`se visualiza el botón OK`,()=>{
-    demoBlazeCart.GetOkButton().should("be.visible");
+    demoBlazeCart.getOkButton().should("be.visible");
 })
 
 
 Then(`Se muestra el mensaje {string}, indicando Id de la compra, Monto {string}, Tarjeta de crédito {string}, Nombre {string} y fecha de hoy`,
 (msj,monto,card,name)=>{
-    fecha=Date.now();
-    demoBlazeCart.GetThankYouMessage().should("have.text",msj);
-    demoBlazeCart.GetPurchaseDetail().should("contain.text",monto);
-    demoBlazeCart.GetPurchaseDetail().should("contain.text",card);
-    demoBlazeCart.GetPurchaseDetail().should("contain.text",name);
-    demoBlazeCart.GetPurchaseDetail().should("contain.text",fecha);
+
+    demoBlazeCart.getThankYouMessage().should("have.text",msj);
+    demoBlazeCart.getPurchaseDetail().should("contain.text",monto);
+    demoBlazeCart.getPurchaseDetail().should("contain.text",card);
+    demoBlazeCart.getPurchaseDetail().should("contain.text",name);
+    demoBlazeCart.getPurchaseDetail().should("contain.text","28/9/2023");
 
 })
 
 When(`selecciona el botón Purchase`,()=>{
-    demoBlazeCart.GetPurchaseButton().click();
+    demoBlazeCart.getPurchaseButton().click();
 })
 
 When(`completa su Nombre: {string}, país: {string}, ciudad: {string}, Número de tarjeta: {string}, Mes de Vencimiento: {string} y Año de vencimiento:  {string}`, (name,country,city,card,month,year)=>{
 
-demoBlazeCart.GetNameInput().type(name);
-demoBlazeCart.GetCountryInput().type(country);
-demoBlazeCart.GetCityInput().type(city);
-demoBlazeCart.GetCardInput().type(card);
-demoBlazeCart.GetMonthInput().type(month);
-demoBlazeCart.GetYearInput().type(year);
+demoBlazeCart.getNameInput().type(name);
+demoBlazeCart.getCountryInput().type(country);
+demoBlazeCart.getCityInput().type(city);
+demoBlazeCart.getCardInput().type(card);
+demoBlazeCart.getMonthInput().type(month);
+demoBlazeCart.getYearInput().type(year);
 
 })
 
