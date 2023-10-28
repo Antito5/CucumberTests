@@ -10,7 +10,4 @@ Then(`visualiza en el header los botones {string}`, (list)=>{
         
     })
 
-
-
-
 })
